@@ -1,5 +1,23 @@
 def pow_mod(x, y, z):
-    "Calculate (x ** y) % z efficiently."
+    """
+    Calcula de manera eficiente el resultado de (x ** y) % z.
+
+    Args:
+        x (int): Base.
+        y (int): Exponente.
+        z (int): Módulo.
+
+    Returns:
+        int: El resultado de (x ** y) % z.
+
+    Example:
+        >>> pow_mod(3, 4, 5)
+        1
+
+    Note:
+        Esta función utiliza el algoritmo de exponenciación modular para calcular de manera eficiente
+        el resultado de la operación (x ** y) % z.
+    """
     number = 1
     while y:
         if y & 1:
