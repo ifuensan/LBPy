@@ -2,10 +2,39 @@ import base58
 import hashlib
 
 def hex_to_bytes(hex_string):
+    """
+    Convierte una cadena hexadecimal a bytes.
+
+    Args:
+        hex_string (str): La cadena hexadecimal que se desea convertir a bytes.
+
+    Returns:
+        bytes: Los bytes resultantes de la conversión.
+
+    Example:
+        >>> hex_to_bytes('48656c6c6f20576f726c64')
+        b'Hello World'
+    """
     # Convierte una cadena hexadecimal a bytes
     return bytes.fromhex(hex_string)
 
 def base58check_encode(data):
+    """
+    Codifica datos en formato Base58.
+
+    Args:
+        data (bytes): Los datos que se desean codificar en Base58.
+
+    Returns:
+        str: La representación Base58 de los datos.
+
+    Raises:
+        ValueError: Si los datos no son bytes.
+
+    Example:
+        >>> base58check_encode(b'Hello World')
+        '1DUJooNvwrPvt42PfVB6f6y5brru'
+    """
     # Codificar en Base58
     base58_encoded = base58.b58encode(data)
 
